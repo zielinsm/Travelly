@@ -4,10 +4,10 @@
      `gulp serve`
      `gulp deploy:html`
      `gulp process:img`
-     `gulp compile:scss`
+     `gulp process:scss`
+     `gulp process:js`
      `gulp format:js`
      `gulp minify:css`
-     `gulp process:js`
 
    -------------------------------------
   
@@ -76,7 +76,7 @@ const server = {
 
 const tasks = {
   
-  build: ['deploy:html','process:img', 'compile:scss', 'minify:css', 'process:js']
+  build: ['deploy:html','process:img', 'process:css', 'process:js']
   
 };
 
@@ -134,16 +134,6 @@ gulp.task('deploy:html', () => {
 });
 
 // -------------------------------------
-//  Task: Deploy:JS
-// -------------------------------------
-
-gulp.task('deploy:js', () => {
-  gulp.src(paths.js.src)
-    .pipe(plumber())
-    .pipe(gulp.dest(paths.js.dest));
-});
-
-// -------------------------------------
 //  Task: Process:IMG
 // -------------------------------------
 
@@ -155,10 +145,10 @@ gulp.task('process:img', () => {
 });
 
 // -------------------------------------
-//  Task: Compile:SCSS
+//  Task: Process:SCSS
 // -------------------------------------
 
-gulp.task('compile:scss', () => {
+gulp.task('process:css', () => {
   gulp.src(paths.css.src)
     .pipe(plumber())
     .pipe(environments.development(sourcemaps.init()))
@@ -169,19 +159,9 @@ gulp.task('compile:scss', () => {
             browsers: ['last 2 versions']
           }))
     .pipe(environments.development(sourcemaps.write('.')))
+    .pipe(environments.production(cssmin()))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(environments.development(browsersync.stream()));
-});
-
-// -------------------------------------
-//  Task: Minify:CSS
-// -------------------------------------
-
-gulp.task('minify:css', () => {
-  gulp.src(paths.css.dest)
-    .pipe(plumber())
-    .pipe(environments.production(cssmin()))
-    .pipe(gulp.dest(paths.css.dest));
 });
 
 // -------------------------------------
