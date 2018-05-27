@@ -2,6 +2,8 @@
 
 ✈️ A simple, responsive travel agency homepage template based on Tomas Laurinavicius' [design].
 
+See a [live demo].
+
 ![Desktop-sized screenshot](https://github.com/zielinsm/Travelly/raw/master/screenshot-desktop.jpg)
 
 
@@ -77,6 +79,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [design]: <https://despreneur.com/travelly-free-travel-website-psd-template/>
+[live demo]: <https://zielinsm.github.io/Travelly/>
 [Airplane departing]: <https://publicdomainvectors.org/en/free-clipart/Airplane-departing/37134.html>
 [Santorini]: <https://www.flickr.com/photos/pedrosz/8309058736>
 [Machu Piccu]: <https://pixabay.com/pl/machu-picchu-inca-ruiny-peru-3416889/>
