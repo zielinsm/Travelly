@@ -1,0 +1,553 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.cover-background {
+  background-image: url("./assets/images/cover-background.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+}
+
+.header {
+  position: relative;
+  padding-top: 30px;
+}
+
+.header-wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-icon {
+  fill: white;
+}
+
+.logo-title {
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  margin-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  color: white;
+}
+
+.navigation {
+  overflow-y: hidden;
+  max-height: 375px;
+  background-color: #eeeeee;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+          transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation {
+    max-height: 75px;
+  }
+}
+
+.navigation-closed {
+  max-height: 0;
+}
+
+.navigation-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation-list {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.navigation-link {
+  display: block;
+  margin-top: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #323232;
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation-link {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 1em;
+  }
+}
+
+.toggle {
+  width: 24px;
+  cursor: pointer;
+}
+
+.toggle-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: white;
+}
+
+.search {
+  padding-top: 10em;
+  padding-bottom: 12em;
+}
+
+.search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-slogan {
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  color: white;
+}
+
+@media only screen and (min-width: 992px) {
+  .search-slogan {
+    font-size: 3.5em;
+  }
+}
+
+.search-form {
+  width: 300px;
+  margin-top: 2em;
+}
+
+@media only screen and (min-width: 992px) {
+  .search-form {
+    width: 450px;
+  }
+}
+
+.search-input {
+  float: left;
+  width: 72%;
+}
+
+.search-text-area {
+  width: calc(100% - 1em);
+  padding-left: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2.5em;
+  border: none;
+}
+
+.search-button {
+  width: 27%;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #fd4f32;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+  line-height: 2.5em;
+  border: none;
+}
+
+.destinations {
+  background-color: #eeeeee;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.destinations-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.destinations-header {
+  padding-top: 3.75em;
+}
+
+.destinations-slogan {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #323232;
+}
+
+.destinations-description {
+  margin-top: 1em;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+
+.card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.card-content {
+  background-color: white;
+  border-bottom: 2px solid #e1e0d8;
+}
+
+.card-item {
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-item {
+    width: 49%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card-item {
+    width: 24%;
+  }
+}
+
+.card-background {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background-australia {
+  background-image: url("./assets/images/card-australia.jpg");
+}
+
+.card-background-south-america {
+  background-image: url("./assets/images/card-background-south-america.jpg");
+}
+
+.card-background-north-america {
+  background-image: url("./assets/images/card-background-north-america.jpg");
+}
+
+.card-background-europe {
+  background-image: url("./assets/images/card-background-europe.jpg");
+}
+
+.card-price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75em;
+  color: white;
+}
+
+.card-slogan {
+  padding: 1em;
+}
+
+.card-title {
+  font-size: 0.85em;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.card-description {
+  margin-top: 1em;
+  font-size: 0.83em;
+  font-family: 'Open Sans', sans-serif;
+  color: #696969;
+  line-height: 1.5em;
+}
+
+.information-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.information-slogan {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #323232;
+}
+
+.information-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.information-item {
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .information-item {
+    width: 30%;
+  }
+}
+
+.information-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #323232;
+  text-transform: uppercase;
+}
+
+.information-description {
+  margin-top: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #8b8b8b;
+}
+
+.newsletter {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.newsletter-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter-slogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.newsletter-form {
+  width: 320px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 992px) {
+  .newsletter-form {
+    width: 470px;
+  }
+}
+
+.newsletter-input {
+  float: left;
+  width: 63%;
+}
+
+.newsletter-text-area {
+  width: calc(100% - 1em);
+  padding-left: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2.5em;
+  background-color: #eeeeee;
+  border: none;
+}
+
+.newsletter-button {
+  width: 35%;
+  padding: 0;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 2.5em;
+  color: white;
+  background-color: #fd4f32;
+  border: none;
+}
+
+.footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #eeeeee;
+}
+
+.footer-wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer-credits {
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #8b8b8b;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-credits {
+    float: initial;
+  }
+}
+
+.footer-navigation {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-navigation {
+    display: block;
+    float: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
