@@ -32,7 +32,7 @@ Keep in mind this command is meant for production environments. Using it strips 
 
 ### Development
 
-If you desire to make changes to the project, use Gulp in development mode. It includes processing of HTML, CSS and JS files with a Browsersync server for hot-reloading.
+If you want to make changes to the project, use Gulp in development mode. Live processing of HTML, CSS and JS files with a Browsersync server for hot-reloading are included.
 
 Inside of the project's folder use this command:
 
