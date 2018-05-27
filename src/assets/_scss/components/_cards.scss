@@ -1,0 +1,79 @@
+.card {
+	
+	 &-wrapper {
+	   display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
+    flex: 1;  
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+	 }
+  
+  &-content {
+    background-color: white;
+    border-bottom: 2px solid #e1e0d8;
+  }
+  
+  &-item {
+  	 width: 100%;
+	   padding-bottom: 1em;
+		
+		  @include breakpoint(medium) {
+      width: 49%;
+		  }
+		
+		  @include breakpoint(large) {
+      width: 24%;
+		  }
+  }
+  
+  &-background {
+  	 height: 200px;
+  		display: flex;
+		  flex-direction: row-reverse;
+    background-size: cover;
+    background-position: center;
+    
+    &-australia {
+      background-image: url($card-background-australia);	
+    }
+    
+    &-south-america {
+      background-image: url($card-background-south-america);	
+    }
+    
+    &-north-america {
+      background-image: url($card-background-north-america);	
+    }
+    
+    &-europe {
+      background-image: url($card-background-europe);	
+    }
+  }
+  
+  &-price {
+  		align-self: flex-end;
+		  padding-right: 1em;
+		  padding-bottom: 1em;
+		  font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    color: white;	
+  }
+  
+  &-slogan { padding: 1em; }
+  
+  &-title {
+    font-size: 0.85em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;	
+  }
+  
+  &-description {
+  	 margin-top: 1em;
+    font-size: 0.83em;
+    font-family: 'Open Sans', sans-serif;
+    color: #696969;
+    line-height: 1.5em;  	
+  }
+}

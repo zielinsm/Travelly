@@ -1,0 +1,55 @@
+.navigation {
+	overflow-y: hidden;
+	max-height: 375px;
+	background-color: $light-gray;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+	
+	@include breakpoint(large) {
+	  max-height: 75px;	
+	}
+
+	&-closed {
+	  max-height: 0;
+	}
+	
+	&-wrapper {
+	  justify-content: center;	
+	}
+	
+	&-list {
+	  margin-top: 1em;
+	  margin-bottom: 1em;
+	}
+	
+ &-link {
+  	 display: block;
+  	 margin-top: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: $title-color;
+    
+    @include breakpoint(large) {
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 1em;
+    }
+  }
+	
+}
+
+.toggle {
+ 	width: 24px;
+ 	cursor: pointer;
+ 	
+  &-line {
+  	 display: block;
+ 	  width: 100%;
+ 	  height: 3px;
+ 	  margin-bottom: 4px;
+ 	  background-color: white;
+ 	}
+ 	
+}

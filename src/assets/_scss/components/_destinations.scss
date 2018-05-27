@@ -1,0 +1,24 @@
+.destinations {
+	 background-color: $light-gray;
+	 border-bottom: 1px solid #e7e7e7;
+	 
+	 &-wrapper { flex-direction: column;	}
+	 
+	 &-header { padding-top: 3.75em; }
+	 
+	 &-slogan {
+	   font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $title-color;
+	 }
+	 
+	 &-description {
+  	 margin-top: 1em;
+	   font-size: 1em;
+	   font-family: 'Open Sans', sans-serif;
+	   font-weight: 400;
+	   color: #8b8b8b;	 	
+	 }
+}

@@ -1,0 +1,45 @@
+.information {
+	
+  &-wrapper { flex-direction: column; }
+	
+	 &-slogan {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+		  font-family: 'Open Sans', sans-serif;
+		  font-weight: 300;
+		  color: #323232;
+	 }
+	
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  &-item {
+    margin-bottom: 1.5em;
+    width: 100%;
+    
+    @include breakpoint(large) {
+	     width: 30%;
+	   }	
+  }
+  
+  &-title {
+    font-family: 'Montserrat', sans-serif;
+		  font-size: 1em;
+		  color: $title-color;
+		  text-transform: uppercase; 	
+  }
+  
+  &-description {
+  	 margin-top: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #8b8b8b;	
+  }
+}
