@@ -223,7 +223,5 @@ gulp.task('serve', () => {
       ]
   });
   
-  gulp.watch('./src/*.html', [ 'deploy:html' ]);
-  gulp.watch('./src/assets/**/*.scss', [ 'compile:scss' ]);
-  gulp.watch('./src/assets/js/*.js', [ 'process:js' ]);
+  gulp.watch('./src/**/*', [ 'build' ]);
 });

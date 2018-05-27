@@ -57,6 +57,10 @@ a {
   color: inherit;
 }
 
+input[type=text] {
+  border-radius: 0;
+}
+
 input[type=text]:focus {
   outline: none;
 }
@@ -198,7 +202,7 @@ input[type=text]:focus {
 .search-slogan {
   font-family: 'Open-Sans', sans-serif;
   font-weight: 300;
-  font-size: 2.5em;
+  font-size: 1.8em;
   color: white;
 }
 
@@ -455,12 +459,18 @@ input[type=text]:focus {
 
 .newsletter-slogan {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 992px) {
+  .newsletter-slogan {
+    font-size: 1em;
+  }
+}
+
 .newsletter-form {
-  width: 320px;
+  width: 280px;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -473,7 +483,7 @@ input[type=text]:focus {
 
 .newsletter-input {
   float: left;
-  width: 63%;
+  width: 60%;
 }
 
 .newsletter-text-area {
@@ -489,7 +499,7 @@ input[type=text]:focus {
 }
 
 .newsletter-button {
-  width: 35%;
+  width: 38%;
   padding: 0;
   text-align: center;
   font-size: 1em;

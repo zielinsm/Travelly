@@ -4,6 +4,7 @@ a {
 }
 
 input[type=text] {
+	 border-radius: 0;
   &:focus {
   	outline: none;
   }	
