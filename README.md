@@ -2,6 +2,7 @@
 
 ✈️ A simple, responsive travel agency homepage template based on Tomas Laurinavicius' [design].
 
+![Desktop-sized screenshot](https://github.com/zielinsm/Travelly/raw/master/screenshot-desktop.jpg)
 
 
 # Features
@@ -15,7 +16,7 @@
  
 ### Installation
 
-To use or further develop this project, NPM, Gulp and some additional plugins are required. After you clone this repository, you'll need to set them up.
+To use or further develop this project, NPM, Gulp and some additional plugins are required. After you clone this repository, a quick set-up is required.
 
 
 
