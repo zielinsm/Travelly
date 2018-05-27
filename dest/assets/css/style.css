@@ -80,7 +80,7 @@ input[type=text]:focus {
 }
 
 .cover-background {
-  background-image: url("./assets/images/cover-background.jpg");
+  background-image: url("/assets/images/cover-background.jpg");
   background-size: cover;
   background-position: 50% 20%;
 }
@@ -336,19 +336,19 @@ input[type=text]:focus {
 }
 
 .card-background-australia {
-  background-image: url("./assets/images/card-australia.jpg");
+  background-image: url("/assets/images/card-australia.jpg");
 }
 
 .card-background-south-america {
-  background-image: url("./assets/images/card-background-south-america.jpg");
+  background-image: url("/assets/images/card-background-south-america.jpg");
 }
 
 .card-background-north-america {
-  background-image: url("./assets/images/card-background-north-america.jpg");
+  background-image: url("/assets/images/card-background-north-america.jpg");
 }
 
 .card-background-europe {
-  background-image: url("./assets/images/card-background-europe.jpg");
+  background-image: url("/assets/images/card-background-europe.jpg");
 }
 
 .card-price {
