@@ -17,6 +17,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-environments": "^0.1.2",
+    "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-prettier": "^2.0.0",
     "gulp-sass": "^4.0.1",

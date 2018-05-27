@@ -3,7 +3,7 @@
      `gulp build`
      `gulp serve`
      `gulp deploy:html`
-     `gulp deploy:img`
+     `gulp process:img`
      `gulp compile:scss`
      `gulp format:js`
      `gulp minify:css`
@@ -17,6 +17,7 @@
      gulp-babel          : JavaScript transpiler
      gulp-cssmin         : Minify CSS
      gulp-environments   : Separate environments to run tasks in
+     gulp-imagemin							: Minify images
      gulp-prettier       : JavaScript formatter
      gulp-plumber        : Prevents pipe breaking caused by errors from gulp plugins
      gulp-sass           : Compile Scss
@@ -55,6 +56,9 @@ import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import prettier from 'gulp-prettier';
 
+// ***** IMG plugins ***** //
+import imagemin from 'gulp-imagemin';
+
 // -------------------------------------
 //   Configuration
 // -------------------------------------
@@ -72,7 +76,7 @@ const server = {
 
 const tasks = {
   
-  build: ['deploy:html','deploy:img', 'compile:scss', 'minify:css', 'process:js']
+  build: ['deploy:html','process:img', 'compile:scss', 'minify:css', 'process:js']
   
 };
 
@@ -140,12 +144,13 @@ gulp.task('deploy:js', () => {
 });
 
 // -------------------------------------
-//  Task: Deploy:IMG
+//  Task: Process:IMG
 // -------------------------------------
 
 gulp.task('deploy:img', () => {
   gulp.src(paths.img.src)
     .pipe(plumber())
+    .pipe(imagemin())
     .pipe(gulp.dest(paths.img.dest));
 });
 
