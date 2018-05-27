@@ -147,7 +147,7 @@ gulp.task('deploy:js', () => {
 //  Task: Process:IMG
 // -------------------------------------
 
-gulp.task('deploy:img', () => {
+gulp.task('process:img', () => {
   gulp.src(paths.img.src)
     .pipe(plumber())
     .pipe(imagemin())
